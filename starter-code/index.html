@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js" defer></script>
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Password generator app</title>
+  </head>
+  <body>
+    <main>
+      <h1>Password Generator</h1>
+      <div class="password-output">
+        <span id="password">P4$5W0rD!</span>
+        <button type="button" aria-label="Copy password" disabled>
+          <img src="./assets/images/icon-copy.svg" alt="" />
+        </button>
+        <span id="copy-message" role="status"></span>
+      </div>
+      <form id="password-form" class="generator-settings">
+        <div class="length-control">
+          <div class="length-header">
+            <label for="password-length">Character Length</label>
+            <output for="password-length" id="length-value">10</output>
+          </div>
+
+          <input
+            type="range"
+            id="password-length"
+            min="4"
+            max="20"
+            value="10"
+          />
+        </div>
+        <label class="checkbox-option">
+          <input type="checkbox" id="uppercase" checked />
+          <span>Include Uppercase Letters</span>
+        </label>
+        <label class="checkbox-option">
+          <input type="checkbox" id="lowercase" checked />
+          <span>Include Lowercase Letters</span>
+        </label>
+        <label class="checkbox-option">
+          <input type="checkbox" id="numbers" checked />
+          <span>Include Numbers</span>
+        </label>
+        <label class="checkbox-option">
+          <input type="checkbox" id="symbols" />
+          <span>Include Symbols</span>
+        </label>
+        <div class="strength">
+          <span class="strength-label">Strength</span>
+          <div class="strength-result">
+            <span id="strength-text"></span>
+            <div class="strength-bars" aria-hidden="true">
+              <span class="strength-bar"></span>
+              <span class="strength-bar"></span>
+              <span class="strength-bar"></span>
+              <span class="strength-bar"></span>
+            </div>
+          </div>
+        </div>
+        <button type="submit" class="generate-button">
+          Generate
+          <img src="./assets/images/icon-arrow-right.svg" alt="" />
+        </button>
+      </form>
+    </main>
+  </body>
+</html>

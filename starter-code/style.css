@@ -1,0 +1,279 @@
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("./assets/fonts/JetBrainsMono-VariableFont_wght.ttf")
+    format("truetype");
+  font-weight: 100 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #08070b;
+  color: #e6e5ea;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.5;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 32px 16px;
+}
+
+main {
+  width: 100%;
+  max-width: 640px;
+}
+
+h1 {
+  margin: 0 0 32px;
+  color: #817d92;
+  font-size: 32px;
+  text-align: center;
+}
+
+.password-output {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  background-color: #242322;
+  padding: 20px 32px;
+  margin-bottom: 24px;
+}
+
+#password {
+  font-size: 32px;
+  overflow-wrap: anywhere;
+}
+
+.password-output button {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  padding: 8px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.password-output button img {
+  display: block;
+  width: 21px;
+  height: 24px;
+}
+
+.password-output button:focus-visible {
+  outline: 2px solid #a4ffaf;
+  outline-offset: 4px;
+}
+
+.generator-settings {
+  background-color: #24232c;
+  padding: 24px 32px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.length-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+#length-value {
+  font-size: 32px;
+  color: #a4ffaf;
+}
+
+#password-length {
+  width: 100%;
+  margin: 0;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  height: 8px;
+  background: #18171f;
+}
+
+.checkbox-option {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  cursor: pointer;
+}
+
+.checkbox-option input {
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  flex-shrink: 0;
+  accent-color: #a4ffaf;
+  cursor: pointer;
+}
+
+.strength {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  background-color: #18171f;
+  padding: 20px;
+}
+
+.strength-label {
+  color: #817d92;
+  text-transform: uppercase;
+}
+
+.strength-result {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+#strength-text {
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+.strength-bar {
+  width: 10px;
+  height: 28px;
+  border: 2px solid #e6e5ea;
+}
+
+.strength-bars {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+
+.generate-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  width: 100%;
+  padding: 20px;
+  border: 2px solid #a4ffaf;
+  background-color: #a4ffaf;
+  color: #24232c;
+  font: inherit;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.generate-button img {
+  width: 12px;
+  height: 12px;
+}
+
+.generate-button:hover {
+  background-color: transparent;
+  color: #a4ffaf;
+}
+
+.generate-button:focus-visible {
+  outline: 2px solid #e6e5ea;
+  outline-offset: 4px;
+}
+
+#password-length::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 28px;
+  height: 28px;
+  border: 2px solid #e6e5ea;
+  background: #a4ffaf;
+  border-radius: 50%;
+}
+
+#password-length::-moz-range-thumb {
+  width: 28px;
+  height: 28px;
+  box-sizing: border-box;
+  border: 2px solid #e6e5ea;
+  background: #e6e5ea;
+  border-radius: 50%;
+}
+
+#password-length:focus-visible,
+.checkbox-option input:focus-visible {
+  outline: 2px solid #a4ffaf;
+  outline-offset: 6px;
+}
+
+  h1 {
+    font-size: 32px;
+    margin-bottom: 16px;
+  }
+
+  .password-output {
+    padding: 16px;
+    margin-bottom: 16px;
+  }
+
+  #password {
+    font-size: 24px;
+    min-width: 0;
+  }
+
+  .generator-settings {
+    padding: 16px;
+    gap: 20px;
+  }
+
+  .strength {
+    padding: 16px;
+    gap: 8px;
+  }
+
+  .strength-label {
+    font-size: 14px;
+  }
+
+  .strength-result {
+    gap: 8px;
+  }
+
+  #strength-text {
+    font-size: 16px;
+  }
+
+  .generate-button {
+    padding: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  /* Estilos para celular */
+}
+
+.password-output button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.password-output {
+  position: relative;
+}
+
+#copy-message {
+  position: absolute;
+  right: 16px;
+  bottom: 4px;
+  color: #a4ffaf;
+  font-size: 12px;
+}
+
