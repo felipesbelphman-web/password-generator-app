@@ -4,8 +4,6 @@ A responsive password generator built with HTML, CSS, and JavaScript.
 This project is a solution to the Password Generator App challenge
 on Frontend Mentor.
 
-## Preview
-
 ![Password Generator App desktop preview](./screenshots/password-generator-desktop.png)
 
 ## Features
